@@ -8,7 +8,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
-	"os"
+	//"os"
 
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
@@ -89,8 +89,8 @@ func main() {
 func GetPort() string {
 	// var port = os.Getenv("PORT")
 	// if port == "" {
-		// port = "4747"
-		// fmt.Println("INFO: No PORT environment variable detected, defaulting to " + port)
+	// port = "4747"
+	// fmt.Println("INFO: No PORT environment variable detected, defaulting to " + port)
 	// }
 
 	// fmt.Println("Running Port is" + port)
