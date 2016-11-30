@@ -1,0 +1,81 @@
+{
+	"ImportPath": "github.com/SivaShhankar/peerchatgooglecloud",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v74",
+	"Deps": [
+		{
+			"ImportPath": "cloud.google.com/go/compute/metadata",
+			"Comment": "v0.2.0-31-g2096d28",
+			"Rev": "2096d282df0cbfc9d56742b68f70b737db3a882b"
+		},
+		{
+			"ImportPath": "cloud.google.com/go/internal",
+			"Comment": "v0.2.0-31-g2096d28",
+			"Rev": "2096d282df0cbfc9d56742b68f70b737db3a882b"
+		},
+		{
+			"ImportPath": "github.com/golang/protobuf/proto",
+			"Rev": "1f49d83d9aa00e6ce4fc8258c71cc7786aec968a"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "cf4effbb9db1f3ef07f7e1891402991b6afbb276"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context/ctxhttp",
+			"Rev": "cf4effbb9db1f3ef07f7e1891402991b6afbb276"
+		},
+		{
+			"ImportPath": "golang.org/x/oauth2",
+			"Rev": "1e695b1c8febf17aad3bfa7bf0a819ef94b98ad5"
+		},
+		{
+			"ImportPath": "golang.org/x/oauth2/google",
+			"Rev": "1e695b1c8febf17aad3bfa7bf0a819ef94b98ad5"
+		},
+		{
+			"ImportPath": "golang.org/x/oauth2/internal",
+			"Rev": "1e695b1c8febf17aad3bfa7bf0a819ef94b98ad5"
+		},
+		{
+			"ImportPath": "golang.org/x/oauth2/jws",
+			"Rev": "1e695b1c8febf17aad3bfa7bf0a819ef94b98ad5"
+		},
+		{
+			"ImportPath": "golang.org/x/oauth2/jwt",
+			"Rev": "1e695b1c8febf17aad3bfa7bf0a819ef94b98ad5"
+		},
+		{
+			"ImportPath": "google.golang.org/appengine",
+			"Rev": "150dc57a1b433e64154302bdc40b6bb8aefa313a"
+		},
+		{
+			"ImportPath": "google.golang.org/appengine/internal",
+			"Rev": "150dc57a1b433e64154302bdc40b6bb8aefa313a"
+		},
+		{
+			"ImportPath": "google.golang.org/appengine/internal/app_identity",
+			"Rev": "150dc57a1b433e64154302bdc40b6bb8aefa313a"
+		},
+		{
+			"ImportPath": "google.golang.org/appengine/internal/base",
+			"Rev": "150dc57a1b433e64154302bdc40b6bb8aefa313a"
+		},
+		{
+			"ImportPath": "google.golang.org/appengine/internal/datastore",
+			"Rev": "150dc57a1b433e64154302bdc40b6bb8aefa313a"
+		},
+		{
+			"ImportPath": "google.golang.org/appengine/internal/log",
+			"Rev": "150dc57a1b433e64154302bdc40b6bb8aefa313a"
+		},
+		{
+			"ImportPath": "google.golang.org/appengine/internal/modules",
+			"Rev": "150dc57a1b433e64154302bdc40b6bb8aefa313a"
+		},
+		{
+			"ImportPath": "google.golang.org/appengine/internal/remote_api",
+			"Rev": "150dc57a1b433e64154302bdc40b6bb8aefa313a"
+		}
+	]
+}

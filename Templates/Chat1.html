@@ -1,0 +1,154 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Live Chat</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+    <meta http-equiv="Content-Language" content="en-us">
+
+    <script type="text/javascript" src="/JS/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/JS/jquery-confirm.js"></script>
+
+    <link href="/CSS/jquery-confirm.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="/JS/init.js"></script>
+</head>
+
+<script>
+   $(document).ready(function () {
+
+    $('.callRemotePeer').live('click', function (event) {
+        // var selectedPeerID = $(this).children().last().html();
+        // $('#rid').val(selectedPeerID);
+        // $("#connect").trigger("click");
+        $('img.callRemotePeer').not(this).each(function () {
+            $('img.callRemotePeer').parent().removeClass('active');
+        });
+
+        $(this).parent().addClass('active');
+        var RemotePeerID = $(this).parent().attr('id');
+        //var div = $(this).parent().clone();
+        $.confirm({
+        title: '',
+        content: 'url:' + $(location).attr('protocol') + '//' + $(location).attr('host') + '/Call',
+        onContentReady: function () {
+            var self = this;
+            var input = this.$content.find('input#callto-id');
+            var divOut = this.$content.find('div#connections');
+            //divOut.html('<div id="'  + RemotePeerID + '" class="active"><div class="messages" style="overflow-y:scroll;height:104px;"></div></br><input type="text" class="messagebox" placeholder="Enter message"></div>');
+            // alert(div.html());
+            // alert(divOut.html());
+            input.val(RemotePeerID);
+            
+        }
+        // ,
+        //  buttons: {
+        //     endcall: {
+        //         text: 'End Call',
+        //         btnClass: 'btn-warning',
+        //         action: function () {
+                    
+        //     //          if (window.existingCall) {
+        //     //              alert(window.existingCall);
+        //     //     window.existingCall.close();
+        //     // }
+        //            return true;
+        //         }
+        //     }
+
+        // }
+         
+       
+    });
+
+    });
+   
+    //alert('http://' + $(location).attr('host') + ':8080/userinput.html'); 
+    $.confirm({
+        title: '',
+        content: 'url:' + $(location).attr('protocol') + '//' + $(location).attr('host') + '/UserInput',
+        buttons: {
+            userlogin: {
+                text: 'Login',
+                btnClass: 'btn-warning',
+                action: function () {
+                    var input = this.$content.find('input#input-name');
+                    var errorText = this.$content.find('.text-danger');
+                    if (input.val() == '') {
+                        errorText.html('<font color="red"><b>Name field shouldn\'t be empty !!!</b></font>').slideDown(200);
+                        return false;
+                    } else {
+                        person = input.val();
+                        startPeerSession();
+                    }
+                }
+            }
+
+        }
+    });
+
+    
+});
+    
+</script>
+
+<body>
+    <div class="mainDiv">
+        <div id="actions">
+            <!--<button id="close">Close selected connections</button>-->
+            <table style="width: auto;">
+                <tr>
+                    <td>
+                        Your Peer ID
+                    </td>
+                    <td>
+                        <span id="pid"></span>
+                    </td>
+                </tr>
+
+                <tr style="display:block;">
+                    <td>
+                        Connect to a peer
+                    </td>
+                    <td>
+                        <input type="text" id="rid" placeholder="Remote peer ID">
+                        <input class="button" type="button" value="Connect" id="connect">
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+        <div id="box" style="background: #fff; font-size: 18px; padding: 40px 30px; text-align: center;">
+            Drag file here to send to active connections.
+        </div>
+        <div id="wrap">
+            <div id="connections">
+                <span class="filler" style="position: fixed; bottom: 0px;">
+                    <!--You have not yet made any connections.-->
+                </span>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="UserWidget">
+
+                <div id="userList">
+                    <img class="preloader" src="images/preloader.gif" alt="Loading.." width="22" height="22" /></div>
+                <div class="label">
+                    online</div>
+                <div class="arrow">
+                </div>
+            </div>
+        </div>
+    </div>
+    <link href="/CSS/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/JS/peer.js"></script>
+    <script type="text/javascript" src="/JS/p2p.js"></script>
+    <script type="text/javascript" src="/JS/usersOnline.js"></script>
+    <script type="text/javascript" src="/JS/scroll.js"></script>
+
+</body>
+
+</html>

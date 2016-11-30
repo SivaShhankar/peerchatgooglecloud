@@ -1,0 +1,283 @@
+
+body, html
+{
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    background-color: #eee;
+    color: #444;
+    font-size: 15px;
+    line-height: 18px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+.connection
+{
+    float: left;
+    height: 266px;
+    width: 212px; /* overflow: scroll;*/
+    background-color: #eee;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.connection div
+{
+    margin: 5px 0;
+}
+.connection.active
+{
+    border-color: darkslateblue; /*  box-shadow: deepskyblue 0px 0px 23px 0px;*/
+    box-shadow: deepskyblue 2px 0px 2px 2px;
+    border-radius: 5px;
+}
+h1
+{
+    font-size: 15px;
+    padding: 5px 10px;
+    margin: 0 -10px 0 -10px;
+    border-bottom: 1px solid #ccc;
+    font-weight: 300;
+}
+.active h1 strong
+{
+    color: #FF7500;
+}
+.file, em
+{
+    color: #999;
+    font-style: italic;
+}
+#wrap
+{
+    background-color: #ddd;
+    border-width: 1px 0;
+    border-color: #ccc;
+    border-style: solid;
+    overflow: scroll;
+    height: 320px;
+}
+.clear
+{
+    clear: both;
+}
+.peer
+{
+    color: #FF7500;
+    font-weight: 600;
+}
+.you
+{
+    color: #0C6BA1;
+    font-weight: 600;
+}
+#pid
+{
+    display: inline-block;
+    padding: 5px; /*margin: 5px;*/
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #0C6BA1;
+    font-weight: 600;
+}
+.warning
+{
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+    font-weight: 300;
+    border-width: 1px 0;
+    border-color: #000;
+    border-style: solid;
+}
+a
+{
+    color: #F2C777;
+}
+.filler
+{
+    display: block;
+    padding: 10px;
+}
+#actions
+{
+    padding: 10px;
+}
+
+button, input
+{
+    font-size: 15px;
+    font-family: Arial;
+    border: 1px solid #ccc;
+    border-right: 0;
+    padding: 5px;
+    background: #fff;
+    margin: 0;
+    color: #444;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+input:focus
+{
+    outline: none;
+}
+.button, button
+{
+    cursor: pointer;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+}
+form
+{
+    display: inline-block;
+}
+#close
+{
+    background-color: #FF7500;
+    border-color: #c15c06;
+}
+
+.important
+{
+    font-size: 15px;
+    color: #F2C777;
+    margin-bottom: 10px;
+}
+.messages
+{
+    overflow-y: scroll;
+    height: 185px;
+}
+.messagebox
+{
+    width: 95%; /* border:1px solid red;*/
+    box-shadow: gray 2px 2px;
+}
+.mainDiv
+{
+    margin: 5% 9%;
+    background: lightblue none repeat scroll 0 0;
+    box-shadow: deepskyblue 2px 2px 2px 2px;
+    border-radius: 5px;
+    width: 86%;
+}
+
+/* Online User List */
+
+.UserWidget, #userList
+{
+    /* Styling the widget and the sliding panel at once */
+    background-color: #F9F9F9;
+    border: 2px solid #FFFFFF;
+    height: 25px;
+    padding: 4px 8px;
+    position: relative;
+    width: 176px;
+    cursor: pointer; /* CSS3 rules for rounded corners, box and text shadows: */
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: 0 0 3px #CCCCCC;
+    -webkit-box-shadow: 0 0 3px #CCCCCC;
+    box-shadow: 0 0 3px #CCCCCC;
+    text-shadow: 0 2px 0 white;
+}
+
+
+
+.label
+{
+    /* The online label */
+    float: left;
+    font-size: 10px;
+    padding: 7px 0 0 7px;
+    text-transform: uppercase;
+}
+
+.arrow
+{
+    /* The green arrow on the right */
+    background: url('/images/arrow.png') no-repeat top center;
+    position: absolute;
+    right: 6px;
+    width: 25px;
+    height: 25px;
+}
+
+#userList
+{
+    /* The slideout panel */
+    position: absolute;
+    cursor: default;
+    bottom: 50px;
+    left: 0;
+    height: auto;
+    display: none;
+    margin: -2px;
+    z-index: 1000; /* overflow-y: scroll;     max-height:230px;*/
+}
+
+.preloader
+{
+    /* The rotating gif preloader image */
+    display: block;
+    margin: 10px auto;
+}
+
+
+
+.UserWidget
+{
+    margin: 30px auto 0;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    display: block;
+}
+
+/*.slimScrollDiv { border:1px solid #eee; }*/
+
+#tblData
+{
+    table-layout: fixed;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.usericon
+{
+    vertical-align: middle;
+    display: table-cell;
+    margin-right: 1em;
+}
+span
+{
+    vertical-align: middle;
+    display: table-cell;
+    text-align: justify;
+}
+.userdetails:hover
+{
+    /*color: deepskyblue;*/
+    font-weight: bold;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+.userdetails
+{
+    word-break: break-word;
+    display: table;
+    margin: 5px;
+    cursor: pointer;
+    padding-bottom:5px;
+}
+
+
+/* Peer Call button */
+.callRemotePeer, .CallAudio{
+    float:right;
+    height:25px;
+    cursor:pointer;
+    padding-right:5px;
+}
